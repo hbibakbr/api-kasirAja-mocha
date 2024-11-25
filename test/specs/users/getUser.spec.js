@@ -6,7 +6,7 @@ describe("User Management", () => {
     let accessToken;
     let userId;
 
-    it("GET - List Users", async () => {
+    it("GET - User Detail", async () => {
         // Get Access Token
         accessToken = await getAccessToken();
 

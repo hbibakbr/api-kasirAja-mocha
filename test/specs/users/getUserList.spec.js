@@ -1,12 +1,12 @@
 import { expect } from "chai";
 import { getAccessToken } from "../../helper/getAccessToken.js";
 import { getListUser } from "../../function/users/getUserList.js";
-import { loginSuccessful } from "../../function/authentication/postLoginSuccessful.js";
+//import { loginSuccessful } from "../../function/authentication/postLoginSuccessful.js";
 
 describe("User Management", () => {
     let accessToken;
 
-    it("GET - List Users", async () => {
+    it("GET - User List", async () => {
         // Get Access Token
         // const jsonData = await loginSuccessful();
         // accessToken = (await jsonData).body.data.accessToken;
