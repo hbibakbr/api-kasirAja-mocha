@@ -1,7 +1,7 @@
 import request from "supertest";
 import { baseUrl } from "../../data/config.js"
 
-export async function createUser(accessToken) {
+export async function postCreateUser(accessToken) {
     const payload = {
         "name": "akbar",
         "email": "akbar@example.com",

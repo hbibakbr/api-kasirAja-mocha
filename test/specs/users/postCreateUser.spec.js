@@ -1,6 +1,6 @@
 import { expect } from "chai";
 import { getAccessToken } from "../../helper/getAccessToken.js";
-import { createUser } from "../../function/users/createUser.js";
+import { postCreateUser } from "../../function/users/postCreateUser.js";
 
 describe("User Management", () => {
     let accessToken;
@@ -8,7 +8,7 @@ describe("User Management", () => {
     it("POST - Create User", async () => {
         // Get Access Token  
         accessToken = await getAccessToken();
-        const response = await createUser(accessToken);
+        const response = await postCreateUser(accessToken);
 
         expect((await response).status).to.equal(201);
         expect((await response).body.message).to.equal('User berhasil ditambahkan');
