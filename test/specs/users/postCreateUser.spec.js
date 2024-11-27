@@ -6,7 +6,6 @@ describe("User Management", () => {
     let accessToken;
 
     it("POST - Create User", async () => {
-        // Get Access Token  
         accessToken = await getAccessToken();
         const response = await postCreateUser(accessToken);
 

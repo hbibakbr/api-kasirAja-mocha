@@ -13,7 +13,9 @@
   "author": "habib",
   "license": "ISC",
   "dependencies": {
+    "api-mocha-kasiraja": "file:",
     "chai": "^5.1.2",
+    "jsonschema": "^1.4.1",
     "mocha": "^10.8.2",
     "supertest": "^7.0.0"
   }

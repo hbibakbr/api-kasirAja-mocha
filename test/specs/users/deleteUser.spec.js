@@ -1,10 +1,15 @@
 import { expect } from "chai";
 import { deleteUser } from "../../function/users/deleteUser.js";
+import { getAccessToken } from "../../helper/getAccessToken.js";
 
 describe("User Management", () => {
-    
+    let accessToken;
+    let userId;
+
     it("DELETE - User", async () => {
-        const response = await deleteUser();
+        accessToken = await getAccessToken();
+        userId = 'xxxx'
+        const response = await deleteUser(userId, accessToken);
 
         expect((await response).status).to.equal(200);
         expect((await response).body.status).to.equal('success');
