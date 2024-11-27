@@ -18,6 +18,6 @@ describe("User Management", () => {
         expect((await response).body.status).to.equal('success');
 
         console.log("Status:", response.status);
-        console.log("Response Body:", response.body);
+        console.log("Response Body:", response.body.data);
     }).timeout(10000)
 });
