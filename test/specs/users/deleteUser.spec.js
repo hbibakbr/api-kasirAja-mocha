@@ -6,8 +6,11 @@ describe("User Management", () => {
     let accessToken;
     let userId;
 
-    it("DELETE - User", async () => {
+    before(async function () {
         accessToken = await getAccessToken();
+    })
+
+    it("DELETE - User", async () => {
         userId = 'xxxx'
         const response = await deleteUser(userId, accessToken);
 
@@ -17,5 +20,5 @@ describe("User Management", () => {
 
         console.log("Status:", response.status);
         console.log("Response Body:", response.body);
-    }).timeout(10000)
+    });
 });

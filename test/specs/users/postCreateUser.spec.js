@@ -5,8 +5,11 @@ import { postCreateUser } from "../../function/users/postCreateUser.js";
 describe("User Management", () => {
     let accessToken;
 
-    it("POST - Create User", async () => {
+    before(async function () {
         accessToken = await getAccessToken();
+    })
+
+    it("POST - Create User", async () => {
         const response = await postCreateUser(accessToken);
 
         expect((await response).status).to.equal(201);
@@ -15,5 +18,5 @@ describe("User Management", () => {
 
         console.log("Status:", response.status);
         console.log("Response Body:", response.body);
-    }).timeout(10000)
+    });
 });

@@ -6,8 +6,11 @@ describe("User Management", () => {
     let accessToken;
     let userId;
 
+    before(async function () {
+        accessToken = await getAccessToken();
+    })
+
     it("PUT - Update User", async () => {
-        accessToken = await getAccessToken()
         userId = '691df08c-236e-46fc-b933-94f3c3d088f1';
 
         const expectedName = 'habib-update'
@@ -20,5 +23,5 @@ describe("User Management", () => {
 
         console.log("Status:", response.status);
         console.log("Response Body:", response.body);
-    }).timeout(10000)
+    })
 });

@@ -1,17 +1,18 @@
 import { expect } from "chai";
 import { getAccessToken } from "../../helper/getAccessToken.js";
 import { getUserList } from "../../function/users/getUserList.js";
-//import { loginSuccessful } from "../../function/authentication/postLoginSuccessful.js";
 
 describe("User Management", () => {
     let accessToken;
+
+    before(async function () {
+        accessToken = await getAccessToken();
+    })
 
     it("GET - User List", async () => {
         // Get Access Token
         // const jsonData = await loginSuccessful();
         // accessToken = (await jsonData).body.data.accessToken;
-        
-        accessToken = await getAccessToken();
         const response = await getUserList(accessToken);
 
         expect((await response).status).to.equal(200);
@@ -19,5 +20,5 @@ describe("User Management", () => {
 
         console.log("Status:", response.status);
         console.log("Response Body:", response.body.data);
-    }).timeout(10000)
+    });
 });
