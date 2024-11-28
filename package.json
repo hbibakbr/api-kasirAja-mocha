@@ -18,5 +18,8 @@
     "jsonschema": "^1.4.1",
     "mocha": "^10.8.2",
     "supertest": "^7.0.0"
+  },
+  "mocha": {
+    "timeout": "10000"
   }
 }

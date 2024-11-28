@@ -5,15 +5,16 @@ import { getUser } from "../function/users/getUser.js";
 import { getUserList } from "../function/users/getUserList.js";
 import { putUpdateUser } from "../function/users/putUpdateUser.js";
 import { deleteUser } from "../function/users/deleteUser.js";
+import { before } from "mocha";
 
 
 describe("End to End User Management Testing", () => {
     let accessToken;
     let userId;
 
-    it("Successful Get An Access Token", async () => {
+    before(async function () {
         accessToken = await getAccessToken();
-    }).timeout(10000);
+    })
 
     it("POST - Create User Successful", async () => {
         const response = await postCreateUser(accessToken);
@@ -25,7 +26,7 @@ describe("End to End User Management Testing", () => {
 
         console.log("Status:", response.status);
         console.log("Response Body:", response.body);
-    }).timeout(10000);
+    });
 
     it("GET - User Detail ", async () => {
         const response = await getUser(userId, accessToken);
@@ -37,7 +38,7 @@ describe("End to End User Management Testing", () => {
 
         console.log("Status:", response.status);
         console.log("Response Body:", response.body.data.user)
-    }).timeout(10000);
+    });
 
     it("GET - Users List", async () => {
         const response = await getUserList(accessToken);
@@ -47,7 +48,7 @@ describe("End to End User Management Testing", () => {
 
         console.log("Status:", response.status);
         console.log("Response Body:", response.body);
-    }).timeout(10000);
+    });
 
     it("PUT - Update User", async () => {
         const response = await putUpdateUser(userId, accessToken);
@@ -60,7 +61,7 @@ describe("End to End User Management Testing", () => {
 
         console.log("Status:", response.status);
         console.log("Response Body:", response.body.data);
-    }).timeout(10000);
+    });
 
     it("DELETE - User Successful", async () => {
         const response = await deleteUser(userId, accessToken);
@@ -71,5 +72,5 @@ describe("End to End User Management Testing", () => {
 
         console.log("Status:", response.status);
         console.log("Response Body:", response.body);
-    }).timeout(10000);
+    });
 })
