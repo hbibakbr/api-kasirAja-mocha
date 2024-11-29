@@ -2,7 +2,7 @@ import { expect } from "chai";
 import { getAccessToken } from "../../helper/getAccessToken.js";
 import { getUnitList } from "../../function/units/getUnitList.js";
 
-describe("User Management", () => {
+describe("Unit Management", () => {
     let accessToken;
 
     before(async function () {

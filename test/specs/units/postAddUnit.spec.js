@@ -2,7 +2,7 @@ import { expect } from "chai";
 import { getAccessToken } from "../../helper/getAccessToken.js";
 import { postCreateUnit } from "../../function/units/postCreateUnit.js";
 
-describe("User Management", () => {
+describe("Unit Management", () => {
     let accessToken;
 
     before(async function () {
