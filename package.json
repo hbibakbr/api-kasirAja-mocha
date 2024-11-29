@@ -5,7 +5,14 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npx mocha",
+    "suites": "npx mocha test/suites/*.js",
+    "suites:user": "npx mocha test/suites/user.suite.js",
+    "suites:unit": "npx mocha test/suites/unit.suite.js",
+    "suites:category": "npx mocha test/suites/category.suite.js",
+    "suites:customer": "npx mocha test/suites/customer.suite.js",
+    "suites:product": "npx mocha test/suites/product.suite.js",
+    "suites:report": "npx mocha --reporter mochawesome test/suites/*.js"
   },
   "keywords": [
     "api"
