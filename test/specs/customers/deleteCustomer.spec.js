@@ -3,7 +3,7 @@ import { getAccessToken } from "../../helper/getAccessToken.js";
 import { deleteCustomer } from "../../function/customers/deleteCustomer.js";
 
 
-describe("Categories Management", () => {
+describe("Customers Management", () => {
     let accessToken;
     let customerId;
 
@@ -11,7 +11,7 @@ describe("Categories Management", () => {
         accessToken = await getAccessToken();
     })
 
-    it("DELETE - Category", async () => {
+    it("DELETE - Customer", async () => {
         customerId = 'b2e76c47-7256-4973-b359-7155b9feb111';
         const response = await deleteCustomer(customerId, accessToken);
 
