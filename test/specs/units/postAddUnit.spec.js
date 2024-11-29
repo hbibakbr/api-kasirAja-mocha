@@ -9,7 +9,7 @@ describe("User Management", () => {
         accessToken = await getAccessToken();
     })
 
-    it("POST - Create User", async () => {
+    it("POST - Create Unit", async () => {
         const response = await postCreateUnit(accessToken);
 
         expect((await response).status).to.equal(201);
