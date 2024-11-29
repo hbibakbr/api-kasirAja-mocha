@@ -20,7 +20,6 @@ describe("User Management", () => {
 
         console.log("Status:", response.status);
         console.log("Response Body:", response.body.data.user)
-        console.log("Starting test suite...");
     });
 });
 ;
