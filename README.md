@@ -4,7 +4,7 @@
     <img src="mochawesome-report/mocha-chai.png" alt="Mocha-chai" width="500" style="margin-left: 10px;" >
 </p>
 
-This repository is the result of a project practice aimed at learning and applying API automation testing techniques using Mocha, Chai, and Supertest. The main focus of this project is to validate the core functionalities of kasirAja API Data booking. The API tetsing kasiAja covering the CRUD of user management, unit management, category management, customer management, and product management. This project uses the [kasirAja](https://kasirdemo.belajarqa.com/login) web application. Here's a running demo video of the kasirAja API testing [Youtube](xxx).
+This repository is the result of a project practice aimed at learning and applying API automation testing techniques using Mocha, Chai, and Supertest. The main focus of this project is to validate the core functionalities of kasirAja API Data booking. The API tetsing kasiAja covering the CRUD of user management, unit management, category management, customer management, and product management. This project uses the [kasirAja](https://kasirdemo.belajarqa.com/login) web application. Here's a running demo video of the kasirAja API testing [Demo API Automation Testing using Mocha-chai supertest kasirAja API](https://youtu.be/ydoSqfdE8hc).
 
 ## Screenshot of kasirAja Report
 
